@@ -77,7 +77,7 @@ These features will be analyzed for importance and preprocessing steps such as n
 ### ✅ Models Developed:
 - **Random Forest**
 - **XGBoost (Gradient Boosting)**
--- **LightGBM**
+- **LightGBM**
 
 LightGBM showed **superior validation performance** and was selected as the final model.
 
