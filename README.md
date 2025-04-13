@@ -17,14 +17,14 @@ We'll structure the project as follows:
 
 ---
 
-## 1. 🧠 **Problem Definition**
+## 🧠 **Problem Definition**
 
 **Goal**  
 > Develop a model that distinguishes videos presenting **claims** from those expressing **opinions** to help reduce misinformation on the TikTok platform.
 
 ---
 
-## 2. 📦 **Data**
+## 📦 **Data**
 
 - **Source**: Google Advanced Data Analytics  
 - **Format**: Tabular dataset with metadata and transcription of TikTok videos  
@@ -32,7 +32,7 @@ We'll structure the project as follows:
 
 ---
 
-## 3. 📈 **Evaluation**
+## 📈 **Evaluation**
 
 > Our benchmark:  
 If the model achieves **≥ 95% accuracy**, we consider the project viable for further productionization.
@@ -45,7 +45,7 @@ If the model achieves **≥ 95% accuracy**, we consider the project viable for f
 
 ---
 
-## 4. 🔑 **Features**
+## 🔑 **Features**
 
 Below is the **data dictionary** describing the dataset's features:
 
@@ -67,22 +67,35 @@ These features will be analyzed for importance and preprocessing steps such as n
 
 ---
 
-## 🔬 **Next Steps**
+## 🧠 Machine Learning Model Development
 
-Continue to:
-- Clean and preprocess the data  
-- Perform feature engineering (e.g., TF-IDF on transcription)  
-- Split dataset (train/test)  
-- Fit baseline and advanced classification models  
-- Perform hyperparameter tuning  
-- Evaluate results and iterate  
+### ⚠️ Risk Context:
+- **False positives**: Wasting time on non-violating videos.
+- **False negatives**: Failing to catch harmful content.
+- Emphasis is placed on **recall** to minimize **false negatives**.
+
+### ✅ Models Developed:
+- **Random Forest**
+- **XGBoost (Gradient Boosting)**
+-- **LightGBM**
+
+LightGBM showed **superior validation performance** and was selected as the final model.
+
+### 🧪 Final Test Results:
+
+| Metric     | Score   |
+|------------|---------|
+| Accuracy   | 0.9984  |
+| Precision  | 0.9984  |
+| Recall     | 0.9984  |
+| F1 Score   | 0.9984  |
+
+### 🔍 Feature Importance:
+- Top 5 features: Video engagement metrics  
+- Next 5 features: Vectorized text features from transcription (lower importance) 
+
+The top 5 most important features (from LightGBM) are shown below:
+
+![LightGBM Feature Importances](./Photo/LightGBM_Model_Feature_Importances_Top5.png)
 
 ---
-
-## 📚 **Optional Readings**
-
-- **Text Classification Techniques** – especially for social media NLP  
-- **Feature Selection for High-Dimensional Text Data**  
-- **Bias and Fairness in Machine Learning**  
-- **Explainable AI (XAI) in NLP**  
-- **Misinformation Detection on Social Platforms**  
