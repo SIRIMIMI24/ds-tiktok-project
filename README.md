@@ -38,10 +38,10 @@ We'll structure the project as follows:
 If the model achieves **≥ 95% accuracy**, we consider the project viable for further productionization.
 
 **Metrics to be used:**
-- Accuracy  
+- Accuracy 
 - Precision/Recall (especially if imbalanced)  
 - F1-score  
-- ROC-AUC  
+- ROC-AUC
 
 ---
 
